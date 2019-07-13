@@ -1,0 +1,9 @@
+<div> <%= notice %> </div>
+<nav>
+<% if logged?%>
+    <%= link_to 'Close session', session_path(current_users.id), method: :delete %> <br>
+<% else %>
+    <%= link_to 'Sign up', users_sign_up_path %> <br>
+    <%= link_to 'Login', users_sign_in_path %> <br>
+<% end %>
+</nav>
